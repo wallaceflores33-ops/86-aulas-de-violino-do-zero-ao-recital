@@ -147,12 +147,12 @@ section{padding:56px 0}
 .seals{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:center;margin-top:26px;font-weight:700;font-size:14px;color:#554b44}
 
 footer{background:#fff;text-align:center;padding:30px 20px 34px;color:var(--mut);font-size:14px}
-.mbar{position:fixed;left:0;right:0;bottom:0;background:var(--dk);color:#fff;z-index:60;display:none;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));border-top:3px solid var(--ac);transition:transform .25s}
-.mbar.hide{transform:translateY(110%)}
-.mbar .pr{line-height:1.1}.mbar .pr small{display:block;font-size:12px;color:#cfc5bb}
-.mbar .pr b{font-family:Anton;font-size:30px;color:var(--ac)}
-.mbar a{background:var(--ac);color:var(--dk);font-weight:800;text-decoration:none;padding:13px 18px;border-radius:12px;box-shadow:0 4px 0 var(--ac-d);font-size:15px;text-transform:uppercase}
-@media(max-width:759px){.mbar{display:flex}body{padding-bottom:78px}}
+
+
+
+
+
+@media(max-width:759px){body{padding-bottom:78px}}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -363,8 +363,6 @@ src="https://www.facebook.com/tr?id=5319351178291419&ev=PageView&noscript=1"
 
 <footer>© 2026 Oficina Musical. Todos os direitos reservados.</footer>
 
-<div class="mbar" id="mbar"><div class="pr"><small>86 aulas · pagamento único</small><b>R$ 17,90</b></div><a href="https://pay.cakto.com.br/yzgrazc">Quero as 86 aulas</a></div>
-
 <div class="lb" id="lb" role="dialog" aria-modal="true">
   <button class="x" aria-label="Fechar">✕</button>
   <button class="p" aria-label="Anterior">‹</button>
@@ -407,7 +405,6 @@ src="https://www.facebook.com/tr?id=5319351178291419&ev=PageView&noscript=1"
   });
 
   // barra inferior some quando a oferta está visível
-  var mb=document.getElementById('mbar'),of=document.getElementById('comprar');
   if('IntersectionObserver' in window){
     new IntersectionObserver(function(en){mb.classList.toggle('hide',en[0].isIntersecting)},{threshold:.15}).observe(of);
   }
